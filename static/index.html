@@ -55,9 +55,9 @@
             text-align: left;
         }
         img {
-            max-width: 100%;  /* Ensure images do not exceed the width of the conversation box */
-            height: auto;     /* Maintain aspect ratio */
-            display: block;   /* Remove extra space below images */
+            max-width: 100%;  
+            height: auto;     
+            display: block;   
         }
     </style>
 </head>
@@ -76,9 +76,8 @@
             const input = document.getElementById('question');
             const conversation = document.getElementById('conversation');
             const questionText = input.value;
-            input.value = ''; // Clear input after getting the value
+            input.value = ''; 
 
-            // Display user's question immediately in the conversation
             const userMessage = document.createElement('div');
             userMessage.className = 'message user';
             userMessage.textContent = 'You: ' + questionText;
@@ -97,10 +96,9 @@
                 }
                 const data = await response.json();
 
-                // Display bot's answer in the conversation
                 const botMessage = document.createElement('div');
                 botMessage.className = 'message bot';
-                botMessage.innerHTML = 'Bot: ' + data.answer; // Use innerHTML to render HTML correctly, including images
+                botMessage.innerHTML = 'Bot: ' + data.answer; 
                 conversation.appendChild(botMessage);
             } catch (error) {
                 console.error('Error:', error);
@@ -110,7 +108,6 @@
                 conversation.appendChild(errorMessage);
             }
 
-            // Scroll to the latest message
             conversation.scrollTop = conversation.scrollHeight;
         }
     </script>

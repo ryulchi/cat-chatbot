@@ -1,7 +1,6 @@
 fastapi
+pydantic
 openai
-uvicorn
-python-dotenv
-virtualenv
-pytest
+dotenv
+os
 requests
