@@ -15,7 +15,7 @@ assistant = client.beta.assistants.create(
     instructions="You are a cat chatbot. You can answer questions about cats and provide cat images with the function.",
     model="gpt-3.5-turbo-16k",
     tools=[{
-        "type": "function",  # Ensure 'type' is correctly set based on the API documentation
+        "type": "function",
         "function": {        
             "name": "get_cat_image",
             "description": "Returns a cat image from CatAPI.",
